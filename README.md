@@ -17,7 +17,7 @@
 <p>
     We have nearly equal number of datapoints from both classes therby showing that the dataset has zero-to-no skew.
 </p>
-<img src="images/data_distribution.png" alt="Bar plot showing distribution of tweets, 1 represents tweet that is classified as depressed, 0 represents otherwise">
+![Bar plot showing distribution of tweets, 1 represents tweet that is classified as depressed, 0 represents otherwise](https://user-images.githubusercontent.com/87320561/209464632-df7ad6de-952a-4f07-bc3a-1e9588bdbb7e.png)
 
 ```python
 #Code for above visualization
@@ -41,7 +41,7 @@ By default, NLTK (Natural Language Toolkit) includes a list of 40 stop words, in
 
 <ul>
 <li><p><big>Before removing stopwords from tweets :</big></p>
-<img src="images/Before removing Stopwords.png" alt="KDE plot showing length of tweets before any pre-processing">
+![KDE plot showing length of tweets before any pre-processing](https://user-images.githubusercontent.com/87320561/209464659-132c86dd-f1fd-4661-b025-f9bd2744cfd8.png)
 
 <p>Code for KDE plots of length of tweets before removing stopwords</p>
 
@@ -67,7 +67,8 @@ plt.show()
 
 <li><p><big>After pre-processing of tweets:</big></p>
 
-<img src="images/After removing Stopwords.png" alt="KDE plot showing length of tweets before any pre-processing">
+![KDE plot showing length of tweets before any pre-processing](https://user-images.githubusercontent.com/87320561/209464671-8c59d769-0151-463e-afdd-8c2241e2e48a.png)
+
 <p>Code for KDE plots of length of tweets after removing stopwords </p>
 
 ```python
@@ -95,11 +96,11 @@ plt.show()
 <ol>
 <li>
 <p>For complete dataset : </p> 
-<img src="images/Wordcloud for complete dataset.png" alt="Wordcloud for complete dataset, requires 98s to run">
+![Wordcloud for complete dataset, requires 98s to run](https://user-images.githubusercontent.com/87320561/209464695-a2a8cdcd-7f86-467b-8fe1-c926f602e67c.png)
 
 <li>
 <p>For only not-depressing tweets :</p>
-<img src="images/Wordcloud for sentiment 0.png" alt="Wordcloud for tweets with sentiment0, requires 50-55s to run">
+![Wordcloud for tweets with sentiment0, requires 50-55s to run](https://user-images.githubusercontent.com/87320561/209464725-2bc43581-e447-4d8e-a6e8-1e44e7364147.png)
 <li>
 <p>For only non-depressing tweets :</p>
-<img src="images/Wordcloud for sentiment 1.png" alt="Wordcloud for tweets with sentiment1, requires 50-55s to run">
+![Wordcloud for tweets with sentiment1, requires 50-55s to run](https://user-images.githubusercontent.com/87320561/209464733-18f27807-2859-4917-8d27-123ef4c87aeb.png)
