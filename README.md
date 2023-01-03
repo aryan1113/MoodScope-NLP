@@ -1,3 +1,6 @@
+<h4><a href="https://colab.research.google.com/drive/1i-A_OZnTw3gH9oS78-pgorRYdF4PAeT7?usp=sharing">Link to Colab Notebook</a><hr>
+<a href="https://drive.google.com/file/d/17qzsMRxuh9dljvCzgboAmO-x_JIvRWqp/view?usp=share_link">Link to dataset</a><hr>
+<a href="https://drive.google.com/file/d/1--vzP6Q7SIoUUsjRgNmEv4SHjZByoyrC/view?usp=share_link">Link to processed-dataset</a><hr></h4>
 <h1>
     During pre-processing of data, some trends were observed which are listed below
 </h1>
@@ -43,7 +46,8 @@ By default, NLTK (Natural Language Toolkit) includes a list of 40 stop words, in
 <ul>
 <li><p><big>Before removing stopwords from tweets :</big></p>
 
-![KDE plot showing length of tweets before any pre-processing](https://user-images.githubusercontent.com/87320561/209464659-132c86dd-f1fd-4661-b025-f9bd2744cfd8.png)
+![KDE plot showing length of tweets before any pre-processing](https://user-images.githubusercontent.com/87320561/210363591-c3a1cb5d-9340-490e-94b1-f9243d710404.png)
+
 
 <p>Code for KDE plots of length of tweets before removing stopwords</p>
 
@@ -69,7 +73,8 @@ plt.show()
 
 <li><p><big>After pre-processing of tweets:</big></p>
 
-![KDE plot showing length of tweets before any pre-processing](https://user-images.githubusercontent.com/87320561/209464671-8c59d769-0151-463e-afdd-8c2241e2e48a.png)
+![KDE plot of lenght of tweets after processing](https://user-images.githubusercontent.com/87320561/210363775-844f8e5e-f413-47b7-ac2d-ef717520a991.png)
+
 
 <p>Code for KDE plots of length of tweets after removing stopwords </p>
 
@@ -99,13 +104,23 @@ plt.show()
 <li>
 <p>For complete dataset : </p> 
 
-![Wordcloud for complete dataset, requires 98s to run](https://user-images.githubusercontent.com/87320561/209464695-a2a8cdcd-7f86-467b-8fe1-c926f602e67c.png)
+![Wordcloud for complete dataset, requires 98s to run](https://user-images.githubusercontent.com/87320561/210363938-baac2ae6-d05c-4e3b-8d4b-760013f8f811.png)
 
 <li>
-<p>For only not-depressing tweets :</p>
+<p>For only tweets labelled as not-depressing :</p>
 
-![Wordcloud for tweets with sentiment0, requires 50-55s to run](https://user-images.githubusercontent.com/87320561/209464725-2bc43581-e447-4d8e-a6e8-1e44e7364147.png)
+![Wordcloud for tweets with sentiment0, requires 50-55s to run](https://user-images.githubusercontent.com/87320561/210364100-cf81cc5e-da7a-4480-97fc-e53dedc688fb.png)
 <li>
-<p>For only non-depressing tweets :</p>
+<p>For only tweets labelled as depressing :</p>
 
-![Wordcloud for tweets with sentiment1, requires 50-55s to run](https://user-images.githubusercontent.com/87320561/209464733-18f27807-2859-4917-8d27-123ef4c87aeb.png)
+![Wordcloud for tweets with sentiment1, requires 50-55s to run](https://user-images.githubusercontent.com/87320561/210364201-16a3335f-149c-4d04-8aef-c8dd1f0721a4.png)
+
+
+<h4>Errors in Pre-processing (now resolved) :</h4>
+<ul>
+<li>"amp" is an HTML encoder that is used to embed a Tweet, was parsed incorretly by scraper</li>
+<li>Many weird characters were present in SentimentText as emojis were not parsed <br>
+Which were as follows :<br> ® © ¯ ª ¿ ¾ ¨ à ¸ £ ˆ ‡ • ‰ ž « ” ¢ — µ ¡ › ¥ ‚ – ð Ÿ ™ á º · ã ¹ » ± ³ € ¬ ‹ ¤ § ° ì š í † ë ¦ „ ¼ ´ ² ½ </li>
+<li>Some tweets have length >140 which is not allowed by twitter, such instances were rare around 2 in a million (Total: 3)</li>
+
+</ul>
