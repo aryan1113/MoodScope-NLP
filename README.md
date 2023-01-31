@@ -1,9 +1,13 @@
-<h4><a href="https://colab.research.google.com/drive/1i-A_OZnTw3gH9oS78-pgorRYdF4PAeT7?usp=sharing">Link to Colab Notebook</a><hr>
-<a href="https://drive.google.com/file/d/17qzsMRxuh9dljvCzgboAmO-x_JIvRWqp/view?usp=share_link">Link to dataset</a><hr>
+<h4><a href="https://colab.research.google.com/drive/1i-A_OZnTw3gH9oS78-pgorRYdF4PAeT7?usp=sharing">Link to Colab Notebook for pre-processing</a><hr>
+<h4><a href ="https://colab.research.google.com/drive/1hQM18tYFcuMqSWnRA7MaXi2UADIiMCML?usp=sharing">Link to Colab Notebook for LSTM Model </a><hr>
+<a href="https://drive.google.com/file/d/17qzsMRxuh9dljvCzgboAmO-x_JIvRWqp/view?usp=share_link">Link to (original) dataset</a><hr>
 <a href="https://drive.google.com/file/d/1--vzP6Q7SIoUUsjRgNmEv4SHjZByoyrC/view?usp=share_link">Link to processed-dataset</a><hr></h4>
-<h1>
+
+<h1>EDA</h1>
+
+<h2>
     During pre-processing of data, some trends were observed which are listed below
-</h1>
+</h2>
 
 <ul>
     <li>Tweets labelled as '1' are said to be "depressing" in nature and '0' otherwise.
@@ -124,3 +128,34 @@ Which were as follows :<br> ® © ¯ ª ¿ ¾ ¨ à ¸ £ ˆ ‡ • ‰ ž « �
 <li>Some tweets have length >140 which is not allowed by twitter, such instances were rare around 2 in a million (Total: 3)</li>
 
 </ul>
+
+
+
+<h3> Creating a Model </h3>
+
+<h3> Results :</h3>
+<ul>
+<li>Line graph depicting change in accuracy with change in epochs ran</li>
+
+![Model Accuracy graph](https://user-images.githubusercontent.com/87320561/215672303-19cfa3ad-43db-4f08-a318-af9e4a6ba11e.png)
+
+<li>Graph Showing change in Loss as number of iterations/epochs increase</li>
+
+![Loss vs Epoch graph](https://user-images.githubusercontent.com/87320561/215672264-08580b07-2b9e-4605-b9b9-1184df3baadb.png)
+
+</ul>
+<p>Confusion Matrix : </p>
+
+
+
+
+              precision    recall  f1-score   support
+
+    Negative       0.80      0.84      0.81    157391
+    Positive       0.83      0.79      0.81    158319
+
+    accuracy                           0.81    315710
+    macro avg      0.81      0.81      0.81    315710
+    weighted avg   0.81      0.81      0.81    315710
+    
+  
